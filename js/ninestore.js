@@ -5,7 +5,7 @@ function testApp() {
         if (hasApp) {
 
         } else {
-            window.location.href = "http://www.9apps.com/down/cpkbru.apk";
+            window.location.href = "http://www.ninestore.ru/down/cpkbru.apk";
             xyPop({title: 'Присоединяйся к борьбе！', content: '', bottom: false});
         }
         document.body.removeChild(ifr);
@@ -23,6 +23,8 @@ function testApp() {
         }
     }, t);
 }
+    buildFastDown_new('nineapps://Main', 'http://www.ninestore.ru/down/cpkbru.apk');
+
 
 var url = window.location.href;
 var userId = url.substring(url.lastIndexOf("userId=") + 7, url.length);

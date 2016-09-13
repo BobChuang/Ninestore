@@ -4,6 +4,13 @@
     <title>BlockMan Multiplayer for Minecraft</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <!--Share Setting-->
+    <!--Facebook-->
+    <meta property="og:title" content="BlockMan Multiplayer for Minecraft"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:description"
+          content="Скачай %22Майнкрафт. Голодные игры%22 и присоединяйся к борьбе！Игроки из топ-100 лучших получат в подарок смартфон Xiaomi Max!"/>
+    <meta property="og:image" content="http://7xjtya.com1.z0.glb.clouddn.com/image/jpg/video-page111.png?a123"/>
 
     <!-- css -->
     <link rel="stylesheet" type="text/css" href="css/default.css">
@@ -12,15 +19,17 @@
     <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
 </head>
 
-<body style="width: 100%">
-
+<body>
 <!-- share -->
 <nav class="navbar navbar-default navbar-fixed-top" id="btnShare">
-    <div>
-        <a href="javascript:;" style="position: absolute; right:0px;width: 15%; height: 80px;"
+    <div style="text-align: center;">
+        <img data-original="img/NineStorelogo.png" class="lazy shareLogo"/>
+        <span class="shareText"> Только в Nine Store</span>
+        <a href="javascript:;" style="width: 18%;"
            onclick="xyPop({title:'Пригласи друзей к борьбе!' ,content:'',bottom:false});">
+            <img data-original="img/play_introduce_share.png"
+                 class="lazy shareBtn"/>
         </a>
-        <img data-original="img/ninestore_top.png" style="width: 100%" class="lazy"/>
     </div>
 </nav>
 
@@ -40,7 +49,7 @@
     <div class="part1">
         <h4 class="h4Text">
             &lt;Подарок Ninestore&gt;</h4>
-        <span class="spanText">Загружать приложение игры через Ninestore, вы можете получить масса игровых подарков</span>
+        <span class="spanText">Скачавай приложение в Nine Store, принимай участие в состязаниях и получи  возможность выиграть множество подарков в Minecraft</span>
         <table class="imgList">
             <tr>
                 <td><img data-original="img/play_introduce_gift1.png" class="lazy"></td>
@@ -65,7 +74,7 @@
     </div>
     <div class="part2">
         <h4 class="h4Text">
-            &lt;Уникальные матчевые игры&gt;</h4>
+            &lt;Уникальный PvP- режим&gt;</h4>
         <div class="poster-main B_Demo">
             <div class="poster-btn poster-prev-btn"></div>
             <ul class="poster-list">
@@ -91,11 +100,11 @@
     </div>
     <div class="part3">
         <h4 class="h4Text">
-            &lt;Ранжирование победителя&gt;</h4>
-        <span class="spanText">Здесь есть высшая честь, лучшие конкуренты, самое популярное ранжирование</span>
+            &lt;Рейтинг лучших игроков&gt;</h4>
+        <span class="spanText">Здесь самые прославленные игроки, самые сильные соперники и самые актуальные рейтинги</span>
         <div class="divRank">
             <table width="100%" cellpadding="2" cellspacing="1" id="tableData">
-                <tr style="text-align: center;font-size: 14px; color: #ff8400;background-color:#0D0B0E;">
+                <tr style="text-align: center;font-size: 2vh; color: #ff8400;background-color:#0D0B0E;">
                     <td width="10%" nowrap>Ранжи<br/>рование</td>
                     <td nowrap style="text-align: left;">абонент</td>
                     <td width="10%" nowrap>Победительный<br/>раунд</td>
@@ -124,7 +133,7 @@
                     <td width="35%" nowrap><span id="theThirdNum">666</span></td>
                 </tr>
             </table>
-            <div style="text-align:center; width:100%;height:100%;margin:0px; ">
+            <div style="">
                 <a onclick="testApp();">
                     <button id="btnGet">
                         <img data-original="img/play_introduce_get.png" id="btnGetText" class="lazy"/>
@@ -136,10 +145,10 @@
     <div class="part4">
         <h4 class="h4Text" style="margin-bottom: 5%">
             &lt;Давайте в Ninestore и играйте&gt;</h4>
-        <iframe width="80%" style="margin-bottom: 10%" src="http://player.youku.com/embed/XMTY4NTMyMDc3Ng=="
-                frameborder=0 allowfullscreen></iframe>
-        <iframe width="80%" style="margin-bottom: 15%" src="http://player.youku.com/embed/XMTY4NTMyMDc3Ng=="
-                frameborder=0 allowfullscreen></iframe>
+        <iframe width="80%" style="margin-bottom: 10%" src="https://www.youtube.com/embed/AdyvCzrpgeA" frameborder="0"
+                allowfullscreen></iframe>
+        <iframe width="80%" style="margin-bottom: 15%" src="https://www.youtube.com/embed/0Hnx8z7ts0U" frameborder="0"
+                allowfullscreen></iframe>
     </div>
     <div class="part4">
         <h4 class="h4Text" style="margin-bottom: 5%">&lt;Правила акции&gt;</h4>
@@ -163,23 +172,28 @@
     </div>
     <div class="part4">
         <hr style="height:1px; width:85%;border: 0;border-top:1px solid  #363636;margin-top: -10%;"/>
-        <div class="bottomText" style="padding-bottom: 15%;">Nine Store имеет право на изменения порядка проведения и
+        <div class="bottomText" style="padding-bottom: 17%;">Nine Store имеет право на изменения порядка проведения и
             правил акции. Вся личная информация, представленная участниками, защищена. 
         </div>
     </div>
 </div>
 <!-- 下方浮动bar -->
-<nav class="navbar navbar-default navbar-fixed-bottom"
-     style="background-color: rgba(50, 6, 12, 0); border: 0">
-    <a onclick="testApp();" style="width: 65%; text-align: center; height: 80px;position: absolute; right: 16%;">
+<nav class="navbar navbar-default navbar-fixed-bottom bottomBar">
+    <img data-original="img/NineStorelogo.png" class="lazy shareLogo"/>
+    <div style="">
+        <span style=" font-size: 2.0vh; margin-top: 5%;"> Выиграй большой приз!</span><br/>
+        <span style=" font-size: 1.5vh;float:left;"> Только в Nine Store</span>
+    </div>
 
+    <a onclick="testApp();">
+        <button class="bottomBtn">Скачать</button>
     </a>
-    <img data-original="img/ninestore_bottom.png" style="width: 100%; margin-top:3%" class="lazy"/>
 </nav>
 <script type="text/javascript" src="js/jquery.lazyload.js"></script>
 <script type="text/javascript" src="js/PicCarousel.js"></script>
 <script type="text/javascript" src="js/ninestore.js"></script>
-<script type="text/javascript" src="js/xyPop.js"></script>
+<script type="text/javascript" src="js/shareDialog.js"></script>
+<script type="text/javascript" src="js/fastDownload.js"></script>
 <script type="text/javascript">
     $(".A_Demo").PicCarousel("init");
     $(".B_Demo").PicCarousel({
@@ -199,6 +213,7 @@
             threshold: 1000
         });
     });
+    $('head').append('<meta property="og:url" content="' + window.location.href + '"/>');
 </script>
 </body>
 </html>

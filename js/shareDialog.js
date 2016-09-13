@@ -48,7 +48,7 @@
             bottom: true,				//底部(为false时隐藏底部)
 
             alpha: [".4", "#000"],	//设置遮罩层背景及透明度
-            skinPath: "popImages/"			//css或image路径
+            skinPath: "img/popImages/"			//css或image路径
         },
         init: function () {
             var _i = this, opt = _i.config, c = null, popWin = null, offsetL, offsetT;
@@ -71,8 +71,8 @@
                 + (opt.type ? '<div style="text-align:center;">' +
                 /*'<a onclick="window.webkit.messageHandlers.openBrowser.postMessage("就是一个消息啊");)" target="_blank"><img src="img/twitter.png" alt="Twitter" style="width: 20%; margin:0 2%" /></a>' +*/
                 // '<a onclick="window.location.href = \'https://twitter.com/share?url=https://simplesharebuttons.com&amp;text=Simple%20Share%20Buttons&amp;hashtags=simplesharebuttons\'" target="_blank"><img src="/img/ninestore/twitter.png" alt="Twitter" style="width: 20%; margin:0 2%" /></a>' +
-                '<a onclick="window.location.href = \'https://www.facebook.com/dialog/feed?app_id=672065389635463&redirect_uri=http://dev.sandboxol.cn:8956/activity?type=ninestore&link=http://dev.sandboxol.cn:8956/activity?type=ninestore&picture=http://7xjtya.com1.z0.glb.clouddn.com/image/jpg/video-page111.png?a123&caption=Скачай %22Майнкрафт. Голодные игры%22 и присоединяйся к борьбе！Игроки из топ-100 лучших получат в подарок смартфон Xiaomi Max!\'" target="_blank"><img src="img/facebook.png" alt="Facebook" style="width: 20%; margin:0 10%" /></a>' +
-                '<a onclick="window.location.href = \'http://vk.com/share.php?url=http://dev.sandboxol.cn:8956/activity?type=ninestore&title=BlockMan%20Multiplayer%20for%20Minecraft&description=Скачай %22Майнкрафт. Голодные игры%22 и присоединяйся к борьбе！Игроки из топ-100 лучших получат в подарок смартфон Xiaomi Max!.&image=http://7xjtya.com1.z0.glb.clouddn.com/image/jpg/video-page111.png?a123\'" target="_blank"><img src="img/vk.png" alt="VK" style="width: 20%; margin:0 10%" /></a>' +
+                '<a onclick="window.location.href = \'http://www.facebook.com/sharer.php?u='+window.location.href+'\'" target="_blank"><img src="img/facebook.png" alt="Facebook" style="width: 20%; margin:0 10%" /></a>' +
+                '<a onclick="window.location.href = \'http://vk.com/share.php?url='+window.location.href+'&title=BlockMan%20Multiplayer%20for%20Minecraft&description=Скачай %22Майнкрафт. Голодные игры%22 и присоединяйся к борьбе！Игроки из топ-100 лучших получат в подарок смартфон Xiaomi Max!.&image=http://7xjtya.com1.z0.glb.clouddn.com/image/jpg/video-page111.png?a123\'" target="_blank"><img src="img/vk.png" alt="VK" style="width: 20%; margin:0 10%" /></a>' +
                 // '<a onclick="window.location.href = \'http://ok.ru/dk?st.cmd=addShare&st._surl=http%3A%2F%2Fwww.baidu.com&title=www.baidu.com%20-%20Social%20Sharing%20Buttons%20Script\'" target="_blank"><img src="/img/ninestore/odnoklassniki.png" alt="VK" style="width: 20%; margin:0 2%" /></a>' +
                 '</div>' : opt.content)
                 + '</div>'
@@ -278,7 +278,7 @@
     }());
 
     //加载css文件
-    interface.load("popImages/xyPop.css");
+    interface.load("img/popImages/xyPop.css");
 
     //提供外部接口
     w.xyPop = interface;
