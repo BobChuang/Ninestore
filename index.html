@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>BlockMan Multiplayer for Minecraft</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+
+    <!-- css -->
+    <link rel="stylesheet" type="text/css" href="css/default.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+</head>
+
+<body style="width: 100%">
+
+<!-- share -->
+<nav class="navbar navbar-default navbar-fixed-top" id="btnShare">
+    <div>
+        <a href="javascript:;" style="position: absolute; right:0px;width: 15%; height: 80px;"
+           onclick="xyPop({title:'Пригласи друзей к борьбе!' ,content:'',bottom:false});">
+        </a>
+        <img data-original="img/ninestore_top.png" style="width: 100%" class="lazy"/>
+    </div>
+</nav>
+
+<!-- header -->
+<div class="header">
+    <div>
+        <a id="btnDownloadApk" onclick="testApp();">
+            <button id="btnDownload">
+                <img src="img/play_introduce_download.png" id="btnDownloadText" class="lazy"/>
+            </button>
+        </a>
+    </div>
+</div>
+
+<!-- body -->
+<div class="main-body">
+    <div class="part1">
+        <h4 class="h4Text">
+            &lt;Подарок Ninestore&gt;</h4>
+        <span class="spanText">Загружать приложение игры через Ninestore, вы можете получить масса игровых подарков</span>
+        <table class="imgList">
+            <tr>
+                <td><img data-original="img/play_introduce_gift1.png" class="lazy"></td>
+                <td><img data-original="img/play_introduce_gift2.png" class="lazy"></td>
+                <td><img data-original="img/play_introduce_gift3.png" class="lazy"></td>
+                <td><img data-original="img/play_introduce_gift4.png" class="lazy"></td>
+            </tr>
+            <tr>
+                <td><span class="giftText">Xiaomi power bank 20000</span></td>
+                <td><span class="giftText">Планшет Amazon Fire</span></td>
+                <td><span class="giftText">Xiaomi Mi max 2G</span></td>
+                <td><span class="giftText">SJCAM Экшн-камера </span></td>
+            </tr>
+        </table>
+        <div>
+            <a target="_blank" onclick="testApp();">
+                <button id="btnGetSth">
+                    <img data-original="img/play_introduce_get_sth.png" id="btnGetSthText" class="lazy"/>
+                </button>
+            </a>
+        </div>
+    </div>
+    <div class="part2">
+        <h4 class="h4Text">
+            &lt;Уникальные матчевые игры&gt;</h4>
+        <div class="poster-main B_Demo">
+            <div class="poster-btn poster-prev-btn"></div>
+            <ul class="poster-list">
+                <li class="poster-item"><a href="#"><img data-original="img/play_introduce_map1.png" width="100%"
+                                                         class="picRoll lazy"></a>
+                </li>
+                <li class="poster-item"><a href="#"><img data-original="img/play_introduce_map2.png" width="100%"
+                                                         class="picRoll lazy"></a>
+                </li>
+                <li class="poster-item"><a href="#"><img data-original="img/play_introduce_map3.png" width="100%"
+                                                         class="picRoll lazy"></a>
+                </li>
+                <li class="poster-item"><a href="#"><img data-original="img/play_introduce_map1.png" width="100%"
+                                                         class="picRoll lazy"></a>
+                </li>
+                <li class="poster-item"><a href="#"><img data-original="img/play_introduce_map2.png" width="100%"
+                                                         class="picRoll lazy"></a>
+                </li>
+            </ul>
+            <div class="poster-btn poster-next-btn"></div>
+        </div>
+        <span class="spanText">Описание уникальной игры：вы можете создать комнату и приглашаете друзей бороться друг с другом в игре</span>
+    </div>
+    <div class="part3">
+        <h4 class="h4Text">
+            &lt;Ранжирование победителя&gt;</h4>
+        <span class="spanText">Здесь есть высшая честь, лучшие конкуренты, самое популярное ранжирование</span>
+        <div class="divRank">
+            <table width="100%" cellpadding="2" cellspacing="1" id="tableData">
+                <tr style="text-align: center;font-size: 14px; color: #ff8400;background-color:#0D0B0E;">
+                    <td width="10%" nowrap>Ранжи<br/>рование</td>
+                    <td nowrap style="text-align: left;">абонент</td>
+                    <td width="10%" nowrap>Победительный<br/>раунд</td>
+                </tr>
+                <tr class="defaultData">
+                    <td style="text-align: center" width="30%" nowrap>1</td>
+                    <td style="text-align: left"><img data-original="img/play_introduce_icon1.png" class="lazy"/><span
+                            id="theFirstName">Фирамир</span>
+                    </td>
+                    <td width="35%" nowrap><span id="theFirstNum">956</span></td>
+                </tr>
+                <tr class="defaultData" style="height: 10px"></tr>
+                <tr class="defaultData">
+                    <td style="text-align: center" width="20%" nowrap>2</td>
+                    <td style="text-align: left"><img data-original="img/play_introduce_icon2.png" class="lazy"/><span
+                            id="theSecondName">Турбо Ё..</span>
+                    </td>
+                    <td width="35%" nowrap><span id="theSecondNum">762</span></td>
+                </tr>
+                <tr class="defaultData" style="height: 10px"></tr>
+                <tr class="defaultData">
+                    <td style="text-align: center" width="20%" nowrap>3</td>
+                    <td style="text-align: left"><img data-original="img/play_introduce_icon3.png" class="lazy"/><span
+                            id="theThirdName">Shadow...</span>
+                    </td>
+                    <td width="35%" nowrap><span id="theThirdNum">666</span></td>
+                </tr>
+            </table>
+            <div style="text-align:center; width:100%;height:100%;margin:0px; ">
+                <a onclick="testApp();">
+                    <button id="btnGet">
+                        <img data-original="img/play_introduce_get.png" id="btnGetText" class="lazy"/>
+                    </button>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="part4">
+        <h4 class="h4Text" style="margin-bottom: 5%">
+            &lt;Давайте в Ninestore и играйте&gt;</h4>
+        <iframe width="80%" style="margin-bottom: 10%" src="http://player.youku.com/embed/XMTY4NTMyMDc3Ng=="
+                frameborder=0 allowfullscreen></iframe>
+        <iframe width="80%" style="margin-bottom: 15%" src="http://player.youku.com/embed/XMTY4NTMyMDc3Ng=="
+                frameborder=0 allowfullscreen></iframe>
+    </div>
+    <div class="part4">
+        <h4 class="h4Text" style="margin-bottom: 5%">&lt;Правила акции&gt;</h4>
+        <div class="divRank">
+            <div class="ruleText">1.Позиция в таблице лидеров зависит от количества убитых. Игроки из топа-100 получат в
+                подарок смартфон Xiaomi Max, экшн-камеру SJCAM, планшет Amazon Fire, аккумулятор Xiaomi Power Bank.
+            </div>
+            <div class="ruleText">2.Акция включает в себя два этапа и начнется 26 сентября. Имена победителей первого
+                этапа
+                будут объявлены 4 октября. Имена победителей второго этапа будут объявлены 11 октября.
+            </div>
+            <div class="ruleText">3.Вы можете выбрать призы на странице акции в приложении Minecraft или на странице
+                акции в
+                Nine Store.
+            </div>
+            <div class="ruleText">4.Призы за каждый этап необходимо выбрать в течение
+                недели,
+                по истечении этого срока результаты обнуляются.
+            </div>
+        </div>
+    </div>
+    <div class="part4">
+        <hr style="height:1px; width:85%;border: 0;border-top:1px solid  #363636;margin-top: -10%;"/>
+        <div class="bottomText" style="padding-bottom: 15%;">Nine Store имеет право на изменения порядка проведения и
+            правил акции. Вся личная информация, представленная участниками, защищена. 
+        </div>
+    </div>
+</div>
+<!-- 下方浮动bar -->
+<nav class="navbar navbar-default navbar-fixed-bottom"
+     style="background-color: rgba(50, 6, 12, 0); border: 0">
+    <a onclick="testApp();" style="width: 65%; text-align: center; height: 80px;position: absolute; right: 16%;">
+
+    </a>
+    <img data-original="img/ninestore_bottom.png" style="width: 100%; margin-top:3%" class="lazy"/>
+</nav>
+<script type="text/javascript" src="js/jquery.lazyload.js"></script>
+<script type="text/javascript" src="js/PicCarousel.js"></script>
+<script type="text/javascript" src="js/ninestore.js"></script>
+<script type="text/javascript" src="js/xyPop.js"></script>
+<script type="text/javascript">
+    $(".A_Demo").PicCarousel("init");
+    $(".B_Demo").PicCarousel({
+        "width": 350,		//幻灯片的宽度
+        "height": 175,		//幻灯片的高度
+        "posterWidth": 250,	//幻灯片第一帧的宽度
+        "posterHeight": 175, //幻灯片第一张的高度
+        "scale": 0.8,		//记录显示比例关系
+        "speed": 200,		//记录幻灯片滚动速度
+        "autoPlay": true,	//是否开启自动播放
+        "delay": 2000,		//自动播放间隔
+        "verticalAlign": "center"	//图片对齐位置
+    });
+    $(function () {
+        $("img.lazy").lazyload({
+            effect: "show",
+            threshold: 1000
+        });
+    });
+</script>
+</body>
+</html>

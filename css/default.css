@@ -1,0 +1,96 @@
+/*重置*/
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, fieldset, input, textarea, p, blockquote, th, td {
+    margin: 0;
+    padding: 0;
+}
+
+body, html, nav {
+    font-size: 100%;
+    max-width: 720px;
+    min-width: 320px;
+    margin: 0 auto;
+    padding: 0;
+    text-align: center;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+fieldset, img {
+    border: 0;
+}
+
+address, caption, cite, code, dfn, em, strong, th, var {
+    font-style: normal;
+    font-weight: normal;
+}
+
+/* Reset */
+*,
+*:after,
+*:before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+a {
+    color: #2fa0ec;
+    text-decoration: none;
+    outline: none;
+}
+
+a:hover, a:focus {
+    color: #74777b;
+}
+
+ol, ul {
+    list-style: none;
+}
+
+caption, th {
+    text-align: left;
+}
+
+button:focus {
+    outline: none;
+    border: 1px #000000;
+}
+
+button {
+    outline: none;
+}
+
+button:active {
+    outline: none;
+    border: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-size: 100%;
+    font-weight: normal;
+}
+
+/*q:before,q:after{content: ;}*/
+abbr, acronym {
+    border: 0;
+}
+
+body {
+    color: #666;
+    background-color: #fff;
+    font: 12px/1.5 '微软雅黑', tahoma, arial, 'Hiragino Sans GB', 宋体, sans-serif;
+}
+
+/* Clearfix hack by Nicolas Gallagher: http://nicolasgallagher.com/micro-clearfix-hack/ */
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
