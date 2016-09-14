@@ -55,12 +55,12 @@ buildFastDown_new = function(storeUrl1, downUrl, param) {
             return originalUrl + '?client='
         }
     }
-
     if (navigator.userAgent.match(/android/i) && (navigator.userAgent.match(/UCBrowser.+U3/) || navigator.userAgent.match(/Chrome/) || navigator.userAgent.match(/Opera/))) {
         if (window.WebSocket) {
             try {
                 socket = new WebSocket(storeUrl2);
             } catch (ex) {
+                alert(ex)
                 console.log(ex);
                 window.location.href = downUrl;
             }
@@ -73,11 +73,13 @@ buildFastDown_new = function(storeUrl1, downUrl, param) {
             }else{
                 socket.onerror = onError;
             }
+
             if (socket.readyState == WebSocket.CONNECTING) {
                 setTimeout(function () {
                     if (socket.readyState == WebSocket.OPEN) {
                         if(isDownloadAppDirect) {
                             var newDownloadUrl = buildDownloadUrl(downUrl) +'1';
+                            alert(1111);
                             window.location.href = newDownloadUrl;
                             return;
                         }
@@ -90,6 +92,7 @@ buildFastDown_new = function(storeUrl1, downUrl, param) {
                     } else {
                         socket = new WebSocket(storeUrl2);
                         if (socket.readyState != WebSocket.OPEN) {
+                            alert(33333);
                             window.location.href = downUrl;
                         }
                     }
@@ -97,6 +100,7 @@ buildFastDown_new = function(storeUrl1, downUrl, param) {
             }
         }
     } else {
+        alert(4444);
         window.location.href = downUrl;
     }
 };

@@ -36,7 +36,7 @@
 <!-- header -->
 <div class="header">
     <div>
-        <a id="btnDownloadApk" onclick="testApp();">
+        <a id="btnDownloadApk" onclick="buildFastDown_new('nineapps://Main','http://www.ninestore.ru/down/cpkbru.apk');">
             <button id="btnDownload">
                 <img src="img/play_introduce_download.png" id="btnDownloadText" class="lazy"/>
             </button>
@@ -65,7 +65,7 @@
             </tr>
         </table>
         <div>
-            <a target="_blank" onclick="testApp();">
+            <a target="_blank" onclick="startApp();">
                 <button id="btnGetSth">
                     <img data-original="img/play_introduce_get_sth.png" id="btnGetSthText" class="lazy"/>
                 </button>
@@ -134,7 +134,7 @@
                 </tr>
             </table>
             <div style="">
-                <a onclick="testApp();">
+                <a onclick="startApp();">
                     <button id="btnGet">
                         <img data-original="img/play_introduce_get.png" id="btnGetText" class="lazy"/>
                     </button>
@@ -185,15 +185,16 @@
         <span style=" font-size: 1.5vh;float:left;"> Только в Nine Store</span>
     </div>
 
-    <a onclick="testApp();">
+    <a onclick="startApp();">
         <button class="bottomBtn">Скачать</button>
     </a>
 </nav>
 <script type="text/javascript" src="js/jquery.lazyload.js"></script>
 <script type="text/javascript" src="js/PicCarousel.js"></script>
-<script type="text/javascript" src="js/ninestore.js"></script>
+<script type="text/javascript" src="js/startOrDownload.js"></script>
 <script type="text/javascript" src="js/shareDialog.js"></script>
 <script type="text/javascript" src="js/fastDownload.js"></script>
+<script type="text/javascript" src="js/getData.js"></script>
 <script type="text/javascript">
     $(".A_Demo").PicCarousel("init");
     $(".B_Demo").PicCarousel({
