@@ -8,6 +8,7 @@
     <!--Facebook-->
     <meta property="og:title" content="BlockMan Multiplayer for Minecraft"/>
     <meta property="og:type" content="website"/>
+    <meta property="og:url" content="http://www.ninestore.ru/Blockman-Multiplayer"/>
     <meta property="og:description"
           content="Скачай %22Майнкрафт. Голодные игры%22 и присоединяйся к борьбе！Игроки из топ-100 лучших получат в подарок смартфон Xiaomi Max!"/>
     <meta property="og:image" content="http://7xjtya.com1.z0.glb.clouddn.com/image/jpg/video-page111.png?a123"/>
@@ -36,7 +37,8 @@
 <!-- header -->
 <div class="header">
     <div>
-        <a id="btnDownloadApk" onclick="buildFastDown_new('nineapps://Main','http://www.ninestore.ru/down/cpkbru.apk');">
+        <a id="btnDownloadApk" onclick="buildFastDown_new('nineapps://Main','http://www.ninestore.ru/down/cpkbru.apk');"
+           style="visibility: hidden;">
             <button id="btnDownload">
                 <img src="img/play_introduce_download.png" id="btnDownloadText" class="lazy"/>
             </button>
@@ -65,8 +67,8 @@
             </tr>
         </table>
         <div>
-            <a target="_blank" onclick="startApp();">
-                <button id="btnGetSth">
+            <a target="_blank" onclick="startApp('preheat');">
+                <button class="btnGetSth">
                     <img data-original="img/play_introduce_get_sth.png" id="btnGetSthText" class="lazy"/>
                 </button>
             </a>
@@ -133,13 +135,13 @@
                     <td width="35%" nowrap><span id="theThirdNum">666</span></td>
                 </tr>
             </table>
-            <div style="">
-                <a onclick="startApp();">
-                    <button id="btnGet">
-                        <img data-original="img/play_introduce_get.png" id="btnGetText" class="lazy"/>
-                    </button>
-                </a>
-            </div>
+            <!--<div>-->
+            <!--<a onclick="startApp('preheat');">-->
+            <!--<button id="btnGet">-->
+            <!--<img data-original="img/play_introduce_get.png" id="btnGetText" class="lazy"/>-->
+            <!--</button>-->
+            <!--</a>-->
+            <!--</div>-->
         </div>
     </div>
     <div class="part4">
@@ -180,12 +182,12 @@
 <!-- 下方浮动bar -->
 <nav class="navbar navbar-default navbar-fixed-bottom bottomBar">
     <img data-original="img/NineStorelogo.png" class="lazy shareLogo"/>
-    <div style="">
-        <span style=" font-size: 2.0vh; margin-top: 5%;"> Выиграй большой приз!</span><br/>
-        <span style=" font-size: 1.5vh;float:left;"> Только в Nine Store</span>
+    <div style="height:100%;  margin: 3.5% 0;">
+        <span style=" font-size: 2.0vh;"> Выиграй большой приз!</span><br/>
+        <span style=" font-size: 1.4vh;float:left;font-weight: 100;"> Только в Nine Store</span>
     </div>
 
-    <a onclick="startApp();">
+    <a onclick="startApp('preheat');">
         <button class="bottomBtn">Скачать</button>
     </a>
 </nav>
@@ -195,6 +197,7 @@
 <script type="text/javascript" src="js/shareDialog.js"></script>
 <script type="text/javascript" src="js/fastDownload.js"></script>
 <script type="text/javascript" src="js/getData.js"></script>
+<script type="text/javascript" src="js/clickStatistics.js"></script>
 <script type="text/javascript">
     $(".A_Demo").PicCarousel("init");
     $(".B_Demo").PicCarousel({
@@ -214,7 +217,6 @@
             threshold: 1000
         });
     });
-    $('head').append('<meta property="og:url" content="' + window.location.href + '"/>');
 </script>
 </body>
 </html>

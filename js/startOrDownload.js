@@ -1,11 +1,19 @@
-function startApp() {
-    var url = 'nineapps://Main';
+function startApp(mode) {
+    var openUrl = 'nineapps://Main';
+    var downloadUrl = 'http://www.ninestore.ru/down/cpkbru.apk';
+
+    if(mode == 'preheat'){
+    }else {
+        openUrl = 'nineapps://CommonWebView?url=http://www.baidu.com';
+        downloadUrl = 'http://www.ninestore.ru/down/cpkbru.apk';
+    }
+
     var timeout, t = 1000, hasApp = true;
     setTimeout(function () {
         if (hasApp) {
 
         } else {
-            window.location.href = "http://www.ninestore.ru/down/cpkbru.apk";
+            window.location.href = downloadUrl;
             xyPop({title: 'Присоединяйся к борьбе！', content: '', bottom: false});
         }
         document.body.removeChild(ifr);
@@ -13,7 +21,7 @@ function startApp() {
 
     var t1 = Date.now();
     var ifr = document.createElement("iframe");
-    ifr.setAttribute('src', url);
+    ifr.setAttribute('src', openUrl);
     ifr.setAttribute('style', 'display:none');
     document.body.appendChild(ifr);
     timeout = setTimeout(function () {
