@@ -1,12 +1,12 @@
-function startApp(mode) {
+function startApp() {
     var openUrl = 'nineapps://Main';
     var downloadUrl = 'http://www.ninestore.ru/down/cpkbru.apk';
 
-    if(mode == 'preheat'){
-    }else {
-        openUrl = 'nineapps://CommonWebView?url=http://www.baidu.com';
-        downloadUrl = 'http://www.ninestore.ru/down/cpkbru.apk';
-    }
+    // if(mode == 'preheat'){
+    // }else {
+    //     openUrl = 'nineapps://CommonWebView?url=http://www.baidu.com';
+    //     downloadUrl = 'http://www.ninestore.ru/down/cpkbru.apk';
+    // }
 
     var timeout, t = 1000, hasApp = true;
     setTimeout(function () {
