@@ -5,8 +5,6 @@ var url = window.location.href;
 var userId = url.substring(url.lastIndexOf("userId=") + 7, url.length);
 if (userId.length > 15) {
     userId = 0;
-}else {
-    dismiss();
 }
 
 $.ajax({
@@ -38,7 +36,7 @@ $.ajax({
             }
 
             function pic(cutString) {
-                if (cutString == null||cutString=="") {
+                if (cutString == null || cutString == "") {
                     return "img/tou.png"
                 }
                 return cutString;
@@ -57,9 +55,13 @@ $.ajax({
     }
 });
 
+if (url.indexOf("preheat") > 0) {
+    dismiss();
+}
+
 function dismiss() {
-    $("#btnDownload").css("visibility","hidden");
-    $("#navBottomBar").css("visibility","hidden");
+    $("#btnDownload").css("visibility", "hidden");
+    $("#navBottomBar").css("visibility", "hidden");
     $("#divGet").remove();
 }
 
