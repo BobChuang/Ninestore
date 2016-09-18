@@ -5,6 +5,8 @@ var url = window.location.href;
 var userId = url.substring(url.lastIndexOf("userId=") + 7, url.length);
 if (userId.length > 15) {
     userId = 0;
+}else {
+    dismiss();
 }
 
 $.ajax({
@@ -29,8 +31,8 @@ $.ajax({
                     '</span></td><td width="35%">' + obj2[i].kills + '</td></tr>');
             });
             function cut(cutString) {
-                if (cutString.length > 10) {
-                    cutString = cutString.substring(0, 9) + "...";
+                if (cutString.length > 9) {
+                    cutString = cutString.substring(0, 8) + "...";
                 }
                 return cutString;
             }
@@ -54,3 +56,10 @@ $.ajax({
         console.log("error", textStatus);
     }
 });
+
+function dismiss() {
+    $("#btnDownload").css("visibility","hidden");
+    $("#navBottomBar").css("visibility","hidden");
+    $("#divGet").remove();
+}
+
