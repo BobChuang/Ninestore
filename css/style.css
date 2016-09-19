@@ -111,12 +111,12 @@
     border: none;
     background: url(../img/ninestore_btn.png) no-repeat;
     background-size: 100% 100%;
-    padding: 4% 9%;
+    padding: 4.5% 4%;
 
 }
 
 #btnGetText {
-    width: 90%;
+    width: 100%;
 }
 
 #btnGoTo {

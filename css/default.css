@@ -81,7 +81,7 @@ abbr, acronym {
 body {
     color: #666;
     background-color: #fff;
-    font: 12px/1.5 '微软雅黑', tahoma, arial, 'Hiragino Sans GB', 宋体, sans-serif;
+    font: 12px/1.5 '微软雅黑';
 }
 
 /* Clearfix hack by Nicolas Gallagher: http://nicolasgallagher.com/micro-clearfix-hack/ */
