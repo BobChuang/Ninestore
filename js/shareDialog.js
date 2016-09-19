@@ -37,10 +37,9 @@
             type: "warning",			//图标类型 warning|error|success|confirm
             padding: "8%",			//内容填充区域
             lock: 1,						//锁定屏幕(遮罩)
-            fixed: false,					//是否固定定位
+            fixed: true,					//是否固定定位
             zIndex: 9999,				//设置元素层叠
             time: 0,						//定时关闭
-
             btn: "取消",					//按钮(String/Array) 	btn:"确定" | btn:["确定", "取消"] | btn: ['按钮1', '按钮2', '按钮3', …]
             onShow: null,				//打开弹窗成功回调方法
             onOk: null,					//确定按钮回调方法
@@ -68,11 +67,11 @@
                 + (opt.title ? '<div class="xy-ui-head"><div class="xy-ui-title">' + opt.title + '</div><a class="xy-ui-close"></a></div>' : '')
                 /*内容区域*/
                 + '<div class="xy-ui-body" style="border-radius=5px 5px 5px 5px">'
-                + (opt.type ? '<div style="text-align:center;">' +
+                + (opt.type ? '<div style="text-align:center; padding: 8% 0;">' +
                 /*'<a onclick="window.webkit.messageHandlers.openBrowser.postMessage("就是一个消息啊");)" target="_blank"><img src="img/twitter.png" alt="Twitter" style="width: 20%; margin:0 2%" /></a>' +*/
                 // '<a onclick="window.location.href = \'https://twitter.com/share?url=https://simplesharebuttons.com&amp;text=Simple%20Share%20Buttons&amp;hashtags=simplesharebuttons\'" target="_blank"><img src="/img/ninestore/twitter.png" alt="Twitter" style="width: 20%; margin:0 2%" /></a>' +
-                '<a onclick="window.location.href = \'http://www.facebook.com/sharer.php?u='+window.location.href+'\'" target="_blank"><img src="img/facebook.png" alt="Facebook" style="width: 20%; margin:0 8%" id="btnFacebook"/></a>' +
-                '<a onclick="window.location.href = \'http://vk.com/share.php?url='+window.location.href+'&title=BlockMan%20Multiplayer%20for%20Minecraft&description=Скачай %22Майнкрафт. Голодные игры%22 и присоединяйся к борьбе！Игроки из топ-100 лучших получат в подарок смартфон Xiaomi Max!.&image=http://7xjtya.com1.z0.glb.clouddn.com/image/jpg/video-page111.png?a123\'" target="_blank"><img src="img/vk.png" alt="VK" style="width: 20%; margin:0 8%"  id="btnVK" /></a>' +
+                '<a onclick="window.location.href = \'http://www.facebook.com/sharer.php?u=' + window.location.href + '\'" target="_blank"><img src="img/facebook.png" alt="Facebook" style="width: 20%; margin:0 8%;" id="btnFacebook"/></a>' +
+                '<a onclick="window.location.href = \'http://vk.com/share.php?url=' + window.location.href + '&title=BlockMan%20Multiplayer%20for%20Minecraft&description=Скачай %22Майнкрафт. Голодные игры%22 и присоединяйся к борьбе！Игроки из топ-100 лучших получат в подарок смартфон Xiaomi Max!.&image=http://7xjtya.com1.z0.glb.clouddn.com/image/jpg/video-page111.png?a123\'" target="_blank"><img src="img/vk.png" alt="VK" style="width: 20%; margin:0 8%"  id="btnVK" /></a>' +
                 // '<a onclick="window.location.href = \'http://ok.ru/dk?st.cmd=addShare&st._surl=http%3A%2F%2Fwww.baidu.com&title=www.baidu.com%20-%20Social%20Sharing%20Buttons%20Script\'" target="_blank"><img src="/img/ninestore/odnoklassniki.png" alt="VK" style="width: 20%; margin:0 2%" /></a>' +
                 '</div>' : opt.content)
                 + '</div>'
@@ -93,10 +92,10 @@
             $("body").append(c); //插入到body最后
 
             $("#btnFacebook").click(function () {
-                $.get(request +　'71_2_0_0_1');
+                $.get(request + '71_2_0_0_1');
             });
             $("#btnVK").click(function () {
-                $.get(request +　'71_2_0_0_2');
+                $.get(request + '71_2_0_0_2');
             });
 
             /**锁屏设置*/
@@ -113,10 +112,10 @@
                 "z-index": _i.maxIndex() + 1
             });
 
-            _i.body = _i.popWin.find(".xy-ui-body");
-            _i.body.css({
-                "padding": opt.padding
-            });
+            // _i.body = _i.popWin.find(".xy-ui-body");
+            // _i.body.css({
+            //     "padding": opt.padding
+            // });
 
             offsetL = ($(window).width() - popWin.outerWidth()) / 2;
             offsetT = ($(window).height() - popWin.outerHeight()) / 2;
