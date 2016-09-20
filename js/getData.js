@@ -9,7 +9,7 @@ if (userId.length > 15) {
 
 $.ajax({
     async: false,
-    url: "http://ols.sandboxol.com//minigame/api/v1/ranks/g1001/public?userId=" + userId + "&type=week&name=kills",
+    url: "http://ols.sandboxol.com//minigame/api/v1/ranks/g2001/public?userId=" + userId + "&type=week&name=kills",
     method: "GET",
     dataType: 'jsonp',
     jsonp: 'jsoncallback',
