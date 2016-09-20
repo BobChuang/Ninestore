@@ -16,38 +16,38 @@ $.ajax({
     timeout: 1000,
     contentType: "application/json;utf-8",
     success: function (result) {
-        if (userId != "0") {
+        if (result != "") {
             $(document).ready(function () {
                 $('.defaultData').remove();
             });
-            var obj2 = eval(result);
-            $.each(obj2, function (i) {
-                $("#tableData").append(
-                    '<tr style="height: 10px" class="data_' + i + '"></tr><tr><td style="text-align: center" width="30%">' + rank(obj2[i].rank) +
-                    '</td><td style="text-align: left"><img src="' + pic(obj2[i].picUrl) +
-                    '"/><span>' + cut(obj2[i].nickName) +
-                    '</span></td><td width="35%">' + obj2[i].kills + '</td></tr>');
-            });
-            function cut(cutString) {
-                if (cutString.length > 9) {
-                    cutString = cutString.substring(0, 8) + "...";
-                }
-                return cutString;
+        }
+        var obj2 = eval(result);
+        $.each(obj2, function (i) {
+            $("#tableData").append(
+                '<tr style="height: 10px" class="data_' + i + '"></tr><tr><td style="text-align: center" width="30%">' + rank(obj2[i].rank) +
+                '</td><td style="text-align: left"><img src="' + pic(obj2[i].picUrl) +
+                '"/><span>' + cut(obj2[i].nickName) +
+                '</span></td><td width="35%">' + obj2[i].kills + '</td></tr>');
+        });
+        function cut(cutString) {
+            if (cutString.length > 9) {
+                cutString = cutString.substring(0, 7) + "...";
             }
+            return cutString;
+        }
 
-            function pic(cutString) {
-                if (cutString == null || cutString == "") {
-                    return "img/tou.png"
-                }
-                return cutString;
+        function pic(cutString) {
+            if (cutString == null || cutString == "") {
+                return "img/tou.png"
             }
+            return cutString;
+        }
 
-            function rank(rank) {
-                if (rank == 0) {
-                    return "∞";
-                }
-                return rank;
+        function rank(rank) {
+            if (rank == 0) {
+                return "∞";
             }
+            return rank;
         }
     },
     error: function (jqXHR, textStatus, errorThrown) {
