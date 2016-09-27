@@ -1,10 +1,10 @@
 function startApp() {
-    var openUrl = 'nineapps://Main';
+    var openUrl = 'nineapps://CommonWebView?url=http://www.ninestore.ru/blockman-multiplayer-redeem';
     var downloadUrl = 'http://www.ninestore.ru/down/cpkbru.apk';
 
     // if(mode == 'preheat'){
     // }else {
-    //     openUrl = 'nineapps://CommonWebView?url=http://www.baidu.com';
+    //     openUrl = 'nineapps://CommonWebView?url=http://www.ninestore.ru/blockman-multiplayer-redeem';
     //     downloadUrl = 'http://www.ninestore.ru/down/cpkbru.apk';
     // }
 
